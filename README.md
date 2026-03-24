@@ -7,7 +7,7 @@
 
 ## What is Agent Provenance?
 
-As AI agents become more autonomous — making decisions, learning, and taking actions — there's no standard way to prove *what actually happened*. Agent provenance is a cryptographic record of an agent's lifecycle: every action, decision, and learning event linked in an unbreakable SHA-256 hash chain.
+As AI agents become more autonomous â€” making decisions, learning, and taking actions â€” there's no standard way to prove *what actually happened*. Agent provenance is a cryptographic record of an agent's lifecycle: every action, decision, and learning event linked in an unbreakable SHA-256 hash chain.
 
 Chain of Consciousness gives your agents a verifiable memory. Anyone can audit the chain and confirm that no entries were added, removed, or modified after the fact.
 
@@ -33,13 +33,13 @@ That's it. Five lines. Zero dependencies.
 
 ## Features
 
-- **Zero required dependencies** — Core chain + verification uses only Python stdlib (SHA-256 from `hashlib`).
-- **Tamper-evident** — Each entry's hash includes the previous entry's hash. Change one byte, the entire chain breaks.
-- **Multi-agent support** — Multiple agents can write to the same chain file, each identified by name.
-- **Session continuity** — Forward commitments link sessions together, proving nothing was lost between restarts.
-- **Optional timestamping** — Anchor your chain to Bitcoin (OpenTimestamps) or RFC 3161 TSAs for independent proof of time.
-- **Export & share** — Export chains as JSON for independent verification.
-- **CLI included** — `coc` command for terminal-based chain management.
+- **Zero required dependencies** â€” Core chain + verification uses only Python stdlib (SHA-256 from `hashlib`).
+- **Tamper-evident** â€” Each entry's hash includes the previous entry's hash. Change one byte, the entire chain breaks.
+- **Multi-agent support** â€” Multiple agents can write to the same chain file, each identified by name.
+- **Session continuity** â€” Forward commitments link sessions together, proving nothing was lost between restarts.
+- **Optional timestamping** â€” Anchor your chain to Bitcoin (OpenTimestamps) or RFC 3161 TSAs for independent proof of time.
+- **Export & share** â€” Export chains as JSON for independent verification.
+- **CLI included** â€” `coc` command for terminal-based chain management.
 
 ## API Reference
 
@@ -69,12 +69,12 @@ Verify full chain integrity. Checks hash linkage, data hashes, sequence numberin
 
 ```python
 result = chain.verify()
-result.valid     # bool — True if chain is intact
-result.entries   # int — total entry count
-result.errors    # list[str] — empty if valid
-result.agents    # dict — {agent_name: entry_count}
-result.types     # dict — {event_type: count}
-result.anchors   # list — timestamps of anchor entries
+result.valid     # bool â€” True if chain is intact
+result.entries   # int â€” total entry count
+result.errors    # list[str] â€” empty if valid
+result.agents    # dict â€” {agent_name: entry_count}
+result.types     # dict â€” {event_type: count}
+result.anchors   # list â€” timestamps of anchor entries
 ```
 
 ### `chain.export(path)`
@@ -186,7 +186,7 @@ This means every entry is cryptographically bound to:
 
 ## Whitepaper
 
-For the full protocol specification, design rationale, and anchoring architecture, see the [Chain of Consciousness whitepaper](https://vibeagentmaking.com/whitepaper.html).
+For the full protocol specification, design rationale, and anchoring architecture, see the [Chain of Consciousness whitepaper](https://vibeagentmaking.com/whitepaper).
 
 ## Verification Demo
 
